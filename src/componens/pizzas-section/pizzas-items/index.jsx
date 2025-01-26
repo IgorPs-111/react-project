@@ -1,8 +1,6 @@
-// eslint-disable-next-line react/prop-types
 const PizzasItems = ({ className, pizzas }) => {
   return (
     <ul className={`${className} pizzas`}>
-      {/* eslint-disable-next-line react/prop-types */}
       {pizzas.map((pizza, index) => (
         <li
           className={`pizzas__pizza pizza ${pizza.soldOut ? "sold-out" : ""}`}

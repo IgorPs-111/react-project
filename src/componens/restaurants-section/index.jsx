@@ -1,5 +1,5 @@
 import HeadingSection from "../heading-section/index.jsx";
-import RestaurantsCard from "../restaurants-card/index.jsx";
+import RestaurantsCard from "./restaurants-card/index.jsx";
 
 const RestaurantsSection = () => {
   return (

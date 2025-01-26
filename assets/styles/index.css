@@ -21,6 +21,21 @@ body {
   padding-bottom: 6rem;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.wrapper__main {
+  flex-grow: 1;
+}
+
+#root {
+  min-height: 100%;
+}
+
 .container {
   max-width: 80rem;
   margin: 0 auto;

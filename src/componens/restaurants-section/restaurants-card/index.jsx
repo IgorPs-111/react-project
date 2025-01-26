@@ -1,8 +1,7 @@
-import { restaurants } from "../../constants/mock.js";
+import { restaurants } from "../../../constants/mock.js";
 import RestaurantsMenu from "./restaurants-menu/index.jsx";
 import RestaurantsReviews from "./restaurants-reviews/index.jsx";
 
-// eslint-disable-next-line react/prop-types
 const RestaurantsCard = ({ className }) => {
   return (
     <>

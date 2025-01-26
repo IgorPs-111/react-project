@@ -1,8 +1,6 @@
-// eslint-disable-next-line react/prop-types
 const RestaurantsMenu = ({ restaurant, className }) => {
   return (
     <>
-      {/* eslint-disable-next-line react/prop-types */}
       {restaurant.menu.map((menu, index) => (
         <div
           className={`${className} restaurants-menu`}

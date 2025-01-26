@@ -1,8 +1,6 @@
-// eslint-disable-next-line react/prop-types
 const RestaurantsReviews = ({ restaurant, className }) => {
   return (
     <>
-      {/* eslint-disable-next-line react/prop-types */}
       {restaurant.reviews.map((reviews, index) => (
         <div
           className={`${className} restaurants-reviews`}
