@@ -1,11 +1,14 @@
+import { Header } from "../src/componens/header/index.jsx";
+import { Footer } from "../src/componens/footer/index.jsx";
+
 export const Layout = ({ children }) => {
   return (
     <div className="wrapper">
       <div className="wrapper__main">
-        <header className="header"></header>
+        <Header />
         {children}
       </div>
-      <footer className="footer"></footer>
+      <Footer />
     </div>
   );
 };
