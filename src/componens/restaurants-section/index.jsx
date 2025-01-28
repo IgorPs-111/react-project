@@ -1,8 +1,8 @@
 import HeadingSection from "../heading-section/index.jsx";
 import { RestaurantsNavigation } from "./restaurantsNavigation/index.jsx";
 import { RestaurantsCard } from "./restaurants-cards/restaurants-card/index.jsx";
-import { restaurants } from "../../constants/mock.js";
 import { useState } from "react";
+import { restaurants } from "../../constants/mock.js";
 
 const RestaurantsSection = () => {
   const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0].name);
