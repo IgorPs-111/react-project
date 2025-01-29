@@ -1,6 +1,6 @@
 import HeadingSection from "../heading-section/index.jsx";
 import PizzasMenu from "./pizzas-menu/index.jsx";
-import Footer from "../footer/index.jsx";
+import PizzasFooter from "./pizzas-footer/index.jsx";
 
 const PizzaSection = () => {
   return (
@@ -11,7 +11,7 @@ const PizzaSection = () => {
           className="pizza-section__header header"
         />
         <PizzasMenu />
-        <Footer />
+        <PizzasFooter />
       </div>
     </div>
   );

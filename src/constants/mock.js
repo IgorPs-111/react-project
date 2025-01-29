@@ -22,6 +22,7 @@ export const restaurants = [
         ingredients: ["chicken", "bread"],
       },
     ],
+    counter: true,
     reviews: [
       {
         id: "5909796d-5030-4e36-adec-68b8f9ec2d96",
@@ -54,6 +55,7 @@ export const restaurants = [
         ingredients: ["bread", "cheese", "tomatoes", "chicken"],
       },
     ],
+    counter: true,
     reviews: [
       {
         id: "53b642d7-5e86-4717-a466-0640a1dee076",
@@ -98,6 +100,7 @@ export const restaurants = [
         ingredients: ["bread"],
       },
     ],
+    counter: false,
     reviews: [
       {
         id: "53b642d7-5e86-4717-a466-0640a1dee076",
@@ -124,6 +127,7 @@ export const restaurants = [
         ingredients: ["bread", "beef"],
       },
     ],
+    counter: true,
     reviews: [
       {
         id: "5db6247b-ab1c-49db-be1f-8dd27fd38b81",
