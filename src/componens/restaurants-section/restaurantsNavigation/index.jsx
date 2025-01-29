@@ -1,18 +1,18 @@
 export const RestaurantsNavigation = ({
   className,
   restaurants,
-  setActiveRestaurantId,
   activeRestaurantId,
+  onClick,
 }) => {
   return (
     <ul className={`${className} restaurants-navigation`}>
       {restaurants.map(
-        (restaurant, index) =>
+        (restaurant) =>
           restaurant.name && (
-            <li className="restaurants-navigation__item" key={index}>
+            <li className="restaurants-navigation__item" key={restaurant.id}>
               <button
                 className={`restaurants-navigation__btn btn ${restaurant.id === activeRestaurantId ? "active" : ""}`}
-                onClick={() => setActiveRestaurantId(restaurant.id)}
+                onClick={() => onClick(restaurant.id)}
               >
                 {restaurant.name}
               </button>

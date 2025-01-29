@@ -9,6 +9,18 @@ const RestaurantsSection = () => {
     restaurants[0].id,
   );
 
+  const activeRestaurant = restaurants.find(
+    ({ id }) => id === activeRestaurantId,
+  );
+
+  const handleSetActiveRestaurantId = (id) => {
+    console.log(id);
+    if (activeRestaurantId === id) {
+      return;
+    }
+    setActiveRestaurantId(id);
+  };
+
   return (
     <div className="restaurants-section">
       <div className="container">
@@ -21,20 +33,19 @@ const RestaurantsSection = () => {
           <RestaurantsNavigation
             className="restaurants-section__navigation"
             restaurants={restaurants}
-            setActiveRestaurantId={setActiveRestaurantId}
             activeRestaurantId={activeRestaurantId}
+            onClick={handleSetActiveRestaurantId}
           />
 
           <div className="restaurants-section__cards">
-            {restaurants.map(
-              (restaurant) =>
-                restaurant.id === activeRestaurantId && (
-                  <RestaurantsCard
-                    className="restaurants-section__card"
-                    restaurant={restaurant}
-                    key={restaurant.id}
-                  />
-                ),
+            {activeRestaurant && (
+              <RestaurantsCard
+                className="restaurants-section__card"
+                name={activeRestaurant.name}
+                restaurantsMenu={activeRestaurant.menu}
+                restaurantsReviews={activeRestaurant.reviews}
+                restaurantCounter={activeRestaurant.counter}
+              />
             )}
           </div>
         </div>
