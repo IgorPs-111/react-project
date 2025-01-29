@@ -1,7 +1,8 @@
 export const RestaurantsNavigation = ({
   className,
   restaurants,
-  setActiveRestaurant,
+  setActiveRestaurantId,
+  activeRestaurantId,
 }) => {
   return (
     <ul className={`${className} restaurants-navigation`}>
@@ -10,8 +11,8 @@ export const RestaurantsNavigation = ({
           restaurant.name && (
             <li className="restaurants-navigation__item" key={index}>
               <button
-                className="restaurants-navigation__btn btn"
-                onClick={() => setActiveRestaurant(restaurant.name)}
+                className={`restaurants-navigation__btn btn ${restaurant.id === activeRestaurantId ? "active" : ""}`}
+                onClick={() => setActiveRestaurantId(restaurant.id)}
               >
                 {restaurant.name}
               </button>

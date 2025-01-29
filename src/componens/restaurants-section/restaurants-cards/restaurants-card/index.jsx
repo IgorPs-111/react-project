@@ -2,17 +2,11 @@ import RestaurantsMenu from "../restaurants-menu/index.jsx";
 import { Counter } from "../counter/index.jsx";
 import RestaurantsReviews from "../restaurants-reviews/index.jsx";
 
-export const RestaurantsCard = ({
-  className,
-  restaurant,
-  activeRestaurant,
-}) => {
+export const RestaurantsCard = ({ className, restaurant }) => {
   return (
     <>
       {restaurant.name && (
-        <div
-          className={`${className} restaurants-card ${activeRestaurant === restaurant.name ? "active" : ""}`}
-        >
+        <div className={`${className} restaurants-card`}>
           <h2 className="restaurants-card__title">{restaurant.name}</h2>
 
           <RestaurantsMenu

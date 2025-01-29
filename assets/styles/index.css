@@ -227,6 +227,10 @@ footer.footer {
   background-color: #e9bb24;
 }
 
+.btn.active {
+  background-color: tomato;
+}
+
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
@@ -243,23 +247,12 @@ FONT SIZE SYSTEM (px)
 .restaurants-section__cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  /*gap: 25px;*/
 }
 
 .restaurants-card {
   border: 1px solid #edc84b;
   border-radius: 20px;
   padding: 15px;
-  display: none;
-  /*opacity: 0;*/
-  /*visibility: hidden;*/
-  /*transition: height .3s linear, opacity .3s linear, visibility .3s linear;*/
-}
-
-.restaurants-card.active {
-  display: block;
-  /*opacity: 1;*/
-  /*visibility: visible;*/
 }
 
 .restaurants-card__title:not(:last-child) {
