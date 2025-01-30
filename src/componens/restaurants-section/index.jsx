@@ -5,7 +5,21 @@ import { useState } from "react";
 import { restaurants } from "../../constants/mock.js";
 
 const RestaurantsSection = () => {
-  const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0].name);
+  const [activeRestaurantId, setActiveRestaurantId] = useState(
+    restaurants[0].id,
+  );
+
+  const activeRestaurant = restaurants.find(
+    ({ id }) => id === activeRestaurantId,
+  );
+
+  const handleSetActiveRestaurantId = (id) => {
+    console.log(id);
+    if (activeRestaurantId === id) {
+      return;
+    }
+    setActiveRestaurantId(id);
+  };
 
   return (
     <div className="restaurants-section">
@@ -19,41 +33,20 @@ const RestaurantsSection = () => {
           <RestaurantsNavigation
             className="restaurants-section__navigation"
             restaurants={restaurants}
-            setActiveRestaurant={setActiveRestaurant}
+            activeRestaurantId={activeRestaurantId}
+            onClick={handleSetActiveRestaurantId}
           />
 
-          <ul className="restaurants-section__navigation restaurants-navigation">
-            {restaurants.map(
-              (restaurant) =>
-                restaurant.name && (
-                  <li
-                    className="restaurants-navigation__item"
-                    key={restaurant.name}
-                  >
-                    <button
-                      className="restaurants-navigation__btn btn"
-                      onClick={() => {
-                        if (activeRestaurant !== restaurant.name) {
-                          setActiveRestaurant(restaurant.name);
-                        }
-                      }}
-                    >
-                      {restaurant.name}
-                    </button>
-                  </li>
-                ),
-            )}
-          </ul>
-
           <div className="restaurants-section__cards">
-            {restaurants.map((restaurant) => (
+            {activeRestaurant && (
               <RestaurantsCard
-                restaurant={restaurant}
-                key={restaurant.id}
-                activeRestaurant={activeRestaurant}
                 className="restaurants-section__card"
+                name={activeRestaurant.name}
+                restaurantsMenu={activeRestaurant.menu}
+                restaurantsReviews={activeRestaurant.reviews}
+                restaurantCounter={activeRestaurant.counter}
               />
-            ))}
+            )}
           </div>
         </div>
       </div>

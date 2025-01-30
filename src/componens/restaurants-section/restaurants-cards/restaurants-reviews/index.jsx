@@ -1,7 +1,7 @@
-const RestaurantsReviews = ({ restaurant, className }) => {
+const RestaurantsReviews = ({ restaurantsReviews, className }) => {
   return (
     <>
-      {restaurant.reviews.map((reviews, index) => (
+      {restaurantsReviews.map((reviews, index) => (
         <div
           className={`${className} restaurants-reviews`}
           key={index}

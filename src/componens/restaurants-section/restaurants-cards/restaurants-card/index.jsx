@@ -4,30 +4,28 @@ import RestaurantsReviews from "../restaurants-reviews/index.jsx";
 
 export const RestaurantsCard = ({
   className,
-  restaurant,
-  activeRestaurant,
+  name,
+  restaurantsMenu,
+  restaurantsReviews,
+  restaurantCounter,
 }) => {
   return (
     <>
-      {restaurant.name && (
-        <div
-          className={`${className} restaurants-card ${activeRestaurant === restaurant.name ? "active" : ""}`}
-        >
-          <h2 className="restaurants-card__title">{restaurant.name}</h2>
+      <div className={`${className} restaurants-card`}>
+        <h2 className="restaurants-card__title">{name}</h2>
 
-          <RestaurantsMenu
-            restaurant={restaurant}
-            className="restaurants-card__menu"
-          />
-          {restaurant.counter && (
-            <Counter className="restaurants-card__counter" />
-          )}
-          <RestaurantsReviews
-            restaurant={restaurant}
-            className="restaurants-card__reviews"
-          />
-        </div>
-      )}
+        <RestaurantsMenu
+          restaurantsMenu={restaurantsMenu}
+          className="restaurants-card__menu"
+        />
+
+        {restaurantCounter && <Counter className="restaurants-card__counter" />}
+
+        <RestaurantsReviews
+          restaurantsReviews={restaurantsReviews}
+          className="restaurants-card__reviews"
+        />
+      </div>
     </>
   );
 };
