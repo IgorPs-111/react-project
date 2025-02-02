@@ -9,9 +9,9 @@ import { FlashCard } from "./componens/flash-cards/index.jsx";
 export const App = () => {
   return (
     <Layout>
+      <RestaurantsSection />
       <FlashCard />
       <DeveloperCard />
-      <RestaurantsSection />
       <Count />
       <PizzaSection />
     </Layout>

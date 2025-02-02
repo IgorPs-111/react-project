@@ -14,7 +14,6 @@ const RestaurantsSection = () => {
   );
 
   const handleSetActiveRestaurantId = (id) => {
-    console.log(id);
     if (activeRestaurantId === id) {
       return;
     }

@@ -66,6 +66,11 @@ footer.footer {
   margin-bottom: 40px;
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+}
+
 .counter__value {
   border: 1px solid #edc84b;
   display: inline-flex;
@@ -348,4 +353,19 @@ h1 {
 
 .flashcards div.selected {
   background: #edc84b;
+}
+
+.reviews-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviews-form__input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-form__input-wrap label {
+  margin-bottom: 5px;
 }
