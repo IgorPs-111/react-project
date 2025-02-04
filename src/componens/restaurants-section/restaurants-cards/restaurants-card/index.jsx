@@ -1,7 +1,6 @@
 import RestaurantsMenu from "../restaurants-menu/index.jsx";
 import { Counter } from "../counter/index.jsx";
 import RestaurantsReviews from "../restaurants-reviews/index.jsx";
-import { ReviewsFom } from "../../../reviews-fom/index.jsx";
 
 export const RestaurantsCard = ({
   className,
@@ -26,8 +25,6 @@ export const RestaurantsCard = ({
           restaurantsReviews={restaurantsReviews}
           className="restaurants-card__reviews"
         />
-
-        <ReviewsFom className="restaurants-card__reviews-form" />
       </div>
     </>
   );

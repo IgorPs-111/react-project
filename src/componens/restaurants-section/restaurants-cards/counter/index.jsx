@@ -1,26 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Counter = ({ className }) => {
   const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    // console.log(value);
-  }, [value]);
-
-  useEffect(() => {
-    // console.log("only mount");
-  }, []);
-
-  useEffect(() => {
-    const callback = () => {
-      // console.log("scroll");
-    };
-    window.addEventListener("scroll", callback);
-
-    return () => {
-      window.removeEventListener("scroll", callback);
-    };
-  });
 
   const decrement = () => {
     if (value > 0) {
